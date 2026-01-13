@@ -266,7 +266,11 @@ export default function ChapterPage() {
       <ProgressBar progress={progress} />
 
       <ChapterLogo to={`/books/${slug}`} $shrink={shrink}>
-        <img src={chapter.image} alt={`Chapter ${chapterNum}`} />
+        <img
+          src={`${import.meta.env.BASE_URL}${chapter.image}`}
+          alt={`Chapter ${chapterNum}`}
+        />
+
       </ChapterLogo>
 
       <ChapterWrapper>

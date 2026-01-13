@@ -83,7 +83,7 @@ export default function BookCard({
     <CardWrapper>
       <CardLink to={linkPath}>
         <Card>
-          <Image src={image} alt={title} />
+          <Image src={`${import.meta.env.BASE_URL}${image}`} alt={title} />
           <Content>
             <Title>{title}</Title>
             <Tagline>{tagline}</Tagline>

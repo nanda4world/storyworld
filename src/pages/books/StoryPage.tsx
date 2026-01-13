@@ -178,7 +178,11 @@ export default function StoryPage() {
   return (
     <>
       <LogoContainer to="/" $isScrolled={isScrolled}>
-        <img src={book.image} alt={book.title} />
+        <img
+          src={`${import.meta.env.BASE_URL}${book.image}`}
+          alt={book.title}
+        />
+
       </LogoContainer>
 
       <BackLink to="/">← Back to Stories</BackLink>
