@@ -1,4 +1,6 @@
 import Papa from 'papaparse';
+import type { ParseResult } from 'papaparse';
+
 
 const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTspFiQwhDehk_gl4vujKsYZu0rmOwCBoGz0b332bjJXlQxN2i3PBHLdEmZupW6qQ3XQMRr1mdxyuIL/pub?output=csv';
 
@@ -10,7 +12,9 @@ export async function loadSheet(tab: string) {
     Papa.parse(text, {
       header: true,
       skipEmptyLines: true,
-      complete: (results) => resolve(results.data),
+      complete: (results: ParseResult<any>) => {
+        resolve(results.data as any[]);
+      },
     });
   });
 }

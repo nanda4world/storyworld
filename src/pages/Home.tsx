@@ -7,11 +7,14 @@ import { loadSheet } from "../utils/loadSheet";
 /* ================= TYPES ================= */
 
 type Story = {
-  slug: string;
+  id: string;
   title: string;
   tagline: string;
   image: string;
+  genre?: string;
+  comingSoon?: string; // from Sheets, it's "TRUE"/"FALSE"
 };
+
 
 /* ================= STYLES ================= */
 
