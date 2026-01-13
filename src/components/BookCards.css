@@ -1,0 +1,30 @@
+.book-card {
+  background-color: rgba(30, 30, 30, 0.636);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  color: #e0e0e0;
+  transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-9px);
+  
+}
+
+.book-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.book-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #ffa500;
+  text-decoration: none;
+}
+
+.book-link:hover {
+  color: #fff;
+}

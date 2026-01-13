@@ -1,0 +1,40 @@
+/* ChapterCard.css */
+.chapter-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 200px;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.chapter-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.1);
+}
+
+.chapter-image {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+.chapter-info {
+  padding: 1rem;
+  color: white;
+}
+
+.chapter-info h3 {
+  font-size: 1.1rem;
+  color: #ffcc00;
+  margin: 0;
+}
+
+.chapter-info p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
