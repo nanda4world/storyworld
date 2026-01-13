@@ -1,9 +1,9 @@
-name: Deploy Story Website
+name: Deploy Vite site to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["master"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -12,11 +12,14 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout
@@ -33,11 +36,14 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Upload Pages Artifact
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
-      deploy: setup GitHub Pages
