@@ -18,7 +18,7 @@ type Chapter = {
 /* ================= STYLES ================= */
 
 const ChapterWrapper = styled.div`
-background-image: url('story-world-bg.jpg');
+  background: url('/storyworld/story-world-bg.jpg') center/cover no-repeat fixed;
   background-size: cover;
   min-height: 100vh;
   padding: 5rem 2rem 2rem;
