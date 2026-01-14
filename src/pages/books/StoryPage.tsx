@@ -25,7 +25,7 @@ interface Story {
 
 const PageWrapper = styled.div`
   min-height: 100vh;
-  background-image: url('/storyworld/story-world-bg.jpg') center/cover no-repeat fixed;
+  background-image: url('${import.meta.env.BASE_URL}story-world-bg.jpg') center/cover no-repeat fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -207,7 +207,7 @@ export default function StoryPage() {
                 >
                   <ChapterCard to={`/books/${slug}/chapter/${chapter.number}`}>
                     <img
-                      src={chapter.image || '/default-chapter.jpg'}
+                      src={`${import.meta.env.BASE_URL}${chapter.image}`}
                       alt={`Chapter ${chapter.number} cover`}
                       style={{
                         width: '100%',
