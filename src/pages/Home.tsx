@@ -109,7 +109,7 @@ export default function Home() {
   return (
     <>
       <LogoContainer $isshrunk={$isshrunk}>
-<img src={`${import.meta.env.BASE_URL}images/cartoon.png`} />
+        <img src={`${import.meta.env.BASE_URL}images/cartoon.png`} />
       </LogoContainer>
 
       <PageWrapper>
