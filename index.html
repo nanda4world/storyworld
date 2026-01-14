@@ -8,6 +8,16 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stories4U</title>
+      <script>
+          (function () {
+            var redirect = window.location.search;
+            if (redirect.startsWith("?/")) {
+              var newPath = redirect.slice(2).replace(/~and~/g, "&");
+              window.history.replaceState(null, "", "/" + newPath);
+            }
+          })();
+      </script>
+
   </head>
   <body>
     <div id="root"></div>
