@@ -25,7 +25,7 @@ interface Story {
 
 const PageWrapper = styled.div`
   min-height: 100vh;
-  background-image: url('${import.meta.env.BASE_URL}story-world-bg.jpg') center/cover no-repeat fixed;
+  background-image: url(${import.meta.env.BASE_URL}story-world-bg.jpg) center/cover no-repeat fixed;
   display: flex;
   align-items: center;
   justify-content: center;
