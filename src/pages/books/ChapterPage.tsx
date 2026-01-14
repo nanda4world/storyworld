@@ -18,7 +18,7 @@ type Chapter = {
 /* ================= STYLES ================= */
 
 const ChapterWrapper = styled.div`
-  background: url('/textures/soft-paper-bg.jpg') repeat;
+  background: url('images/textures/soft-paper-bg.jpg') repeat;
   background-size: cover;
   min-height: 100vh;
   padding: 5rem 2rem 2rem;
