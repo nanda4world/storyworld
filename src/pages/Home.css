@@ -1,5 +1,5 @@
 .page-wrapper {
-  background-image: url('/src/assets/story-world-bg.jpg');
+  background-image: url('../images/story-world-bg.jpg');
   background-size: cover;
   background-position: center;
   min-height: 100vh;
