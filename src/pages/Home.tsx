@@ -54,7 +54,7 @@ const LogoContainer = styled.div.withConfig({
 
 const PageWrapper = styled.div`
   min-height: 100vh;
-  background-image: url('images/story-world-bg.jpg');
+  background-image: url('story-world-bg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
