@@ -1,26 +1,26 @@
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
+    <!-- in your index.html or _document.tsx -->
+<link rel="icon" type="image/png" href="/public/images/cartoon.png" />
 
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="%BASE_URL%images/cartoon.png" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stories4U</title>
+      <script>
+          (function () {
+            var redirect = window.location.search;
+            if (redirect.startsWith("?/")) {
+              var newPath = redirect.slice(2).replace(/~and~/g, "&");
+              window.history.replaceState(null, "", "/" + newPath);
+            }
+          })();
+      </script>
 
-    <!-- SPA redirect fix -->
-    <script>
-        (function () {
-          var redirect = window.location.search;
-          if (redirect.startsWith("?/")) {
-            var newPath = redirect.slice(2);
-            window.history.replaceState(null, "", "/" + newPath);
-          }
-        })();
-    </script>
-</head>
-<body>
-<div id="root"></div>
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
